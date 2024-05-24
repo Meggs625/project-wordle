@@ -5,8 +5,8 @@ function GuessRow({rowGuess}) {
   return (
   <div>
   <p className="guess">
-    {(rowGuess ? rowGuess.label.split("") : range(5)).map((item, idx) => (
-      <span key={idx} className="cell">{Number.isInteger(item) ? "": item}</span>
+    {range(5).map((val) => (
+      <span key={val} className={`cell ${rowGuess ? rowGuess[val].status : ''}`}>{rowGuess ? rowGuess[val].letter : null}</span>
     ))}
   </p>
   </div>)
