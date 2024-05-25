@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 
-function GuessForm({updateWords}) {
+function GuessForm({handleNewWord, gameStatus}) {
   const [currentGuess, setCurrentGuess] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    updateWords(currentGuess);
+    handleNewWord(currentGuess);
     setCurrentGuess('');
   }
   return (
@@ -20,6 +20,7 @@ handleSubmit(e)
   minLength={5}
   maxLength={5}
   title="5 letter guess"
+  disabled={gameStatus}
   value={currentGuess}
   onChange={e => setCurrentGuess(e.target.value.toUpperCase())}
   />
