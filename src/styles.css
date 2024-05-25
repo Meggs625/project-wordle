@@ -103,26 +103,10 @@ h1 {
   place-content: center;
   aspect-ratio: 1 / 1;
   border: 2px solid var(--color-gray-700);
-  border-radius: var(--radius);
+  border-radius: 50px;
   font-size: 2rem;
 }
 
-/*
-  Round the corners for the 4 cells at the very corners of
-  the game board
-*/
-.guess:first-of-type .cell:first-of-type {
-  --radius: 4px 0px 0px 0px;
-}
-.guess:first-of-type .cell:last-of-type {
-  --radius: 0px 4px 0px 0px;
-}
-.guess:last-of-type .cell:last-of-type {
-  --radius: 0px 0px 4px 0px;
-}
-.guess:last-of-type .cell:first-of-type {
-  --radius: 0px 0px 0px 4px;
-}
 
 .cell.correct {
   background: var(--color-success);
@@ -166,7 +150,7 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
+  width: 60%;
   max-width: 600px;
   margin: 0 auto;
   padding: 32px;
@@ -183,6 +167,11 @@ h1 {
 .sad.banner {
   background: var(--color-error);
   color: white;
+}
+
+.load-new-game-btn {
+  text-decoration: underline;
+  font-size: 24px;
 }
 
 .visually-hidden {

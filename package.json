@@ -11,8 +11,11 @@
     "prettier": "2.6.2",
     "process": "0.11.10",
     "react": "18.2.0",
+    "react-confetti": "6.1.0",
     "react-dom": "18.2.0",
-    "rimraf": "5.0.1"
+    "react-use": "^17.5.0",
+    "rimraf": "5.0.1",
+    "use-sound": "^4.0.1"
   },
   "scripts": {
     "predev": "rimraf .parcel-cache dist",
