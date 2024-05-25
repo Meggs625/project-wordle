@@ -15,6 +15,7 @@ handleSubmit(e)
   <label htmlFor="guess-input">Venture a guess:</label>
   <input 
   id="guess-input" 
+  required
   type="text" 
   pattern="[a-zA-Z]{5}"
   minLength={5}

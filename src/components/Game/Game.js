@@ -60,8 +60,8 @@ function Game() {
   {gameStatus === GAME_STATUS.WON && (
     <div className="happy banner">
     <p>
-      <strong>Congratulations!</strong> Got it in
-      <strong>{` ${numOfGuesses.current} guesses!`}</strong>.
+      <strong>Congratulations!</strong> You got it in
+      <strong>{` ${numOfGuesses.current} ${numOfGuesses.current === 1 ? 'guess' : 'guesses'}`}</strong>
     </p>
     <button className="load-new-game-btn" onClick={loadNewGame}>Play again!</button>
 
